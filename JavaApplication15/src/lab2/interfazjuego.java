@@ -178,7 +178,6 @@ public class interfazjuego extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         puntaje = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -192,7 +191,7 @@ public class interfazjuego extends javax.swing.JFrame {
                 piedrablueActionPerformed(evt);
             }
         });
-        jPanel1.add(piedrablue, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 128, 135));
+        jPanel1.add(piedrablue, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 128, 135));
 
         papelblue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/papel blue.png"))); // NOI18N
         papelblue.setContentAreaFilled(false);
@@ -201,7 +200,7 @@ public class interfazjuego extends javax.swing.JFrame {
                 papelblueActionPerformed(evt);
             }
         });
-        jPanel1.add(papelblue, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 140, 121));
+        jPanel1.add(papelblue, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 140, 121));
 
         tijerablue.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tijeras blue.png"))); // NOI18N
         tijerablue.setContentAreaFilled(false);
@@ -210,23 +209,23 @@ public class interfazjuego extends javax.swing.JFrame {
                 tijerablueActionPerformed(evt);
             }
         });
-        jPanel1.add(tijerablue, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 520, -1, -1));
+        jPanel1.add(tijerablue, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 430, -1, -1));
 
         piedrared.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/piedra red.png"))); // NOI18N
         piedrared.setContentAreaFilled(false);
-        jPanel1.add(piedrared, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 380, 140, 130));
+        jPanel1.add(piedrared, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 310, 140, 130));
 
         papelred.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/papel red.png"))); // NOI18N
         papelred.setContentAreaFilled(false);
-        jPanel1.add(papelred, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 380, 130, 140));
+        jPanel1.add(papelred, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 310, 130, 140));
 
         tijerarred.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tijeras red.png"))); // NOI18N
         tijerarred.setContentAreaFilled(false);
-        jPanel1.add(tijerarred, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 510, -1, 190));
+        jPanel1.add(tijerarred, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 420, -1, 190));
 
         piedrablue1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/piedra blue.png"))); // NOI18N
         piedrablue1.setContentAreaFilled(false);
-        jPanel1.add(piedrablue1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 128, 135));
+        jPanel1.add(piedrablue1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 128, 135));
 
         papelblue1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/papel blue.png"))); // NOI18N
         papelblue1.setContentAreaFilled(false);
@@ -235,7 +234,7 @@ public class interfazjuego extends javax.swing.JFrame {
                 papelblue1ActionPerformed(evt);
             }
         });
-        jPanel1.add(papelblue1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 140, 121));
+        jPanel1.add(papelblue1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 140, 121));
 
         tijerablue1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tijeras blue.png"))); // NOI18N
         tijerablue1.setContentAreaFilled(false);
@@ -244,19 +243,21 @@ public class interfazjuego extends javax.swing.JFrame {
                 tijerablue1ActionPerformed(evt);
             }
         });
-        jPanel1.add(tijerablue1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
+        jPanel1.add(tijerablue1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
 
         score.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        score.setForeground(new java.awt.Color(255, 255, 255));
         score.setText("0");
-        jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 20, 20));
+        jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 20, 20));
 
         score2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        score2.setForeground(new java.awt.Color(255, 255, 255));
         score2.setText("0");
-        jPanel1.add(score2, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 30, 20, 20));
+        jPanel1.add(score2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 30, 20, 20));
 
         piedrared1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/piedra red.png"))); // NOI18N
         piedrared1.setContentAreaFilled(false);
-        jPanel1.add(piedrared1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 140, 140, 130));
+        jPanel1.add(piedrared1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 120, 140, 130));
 
         papelred1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/papel red.png"))); // NOI18N
         papelred1.setContentAreaFilled(false);
@@ -265,31 +266,32 @@ public class interfazjuego extends javax.swing.JFrame {
                 papelred1ActionPerformed(evt);
             }
         });
-        jPanel1.add(papelred1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 140, 130, 140));
+        jPanel1.add(papelred1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 120, 130, 140));
 
         tijerarred1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tijeras red.png"))); // NOI18N
         tijerarred1.setContentAreaFilled(false);
-        jPanel1.add(tijerarred1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 110, -1, 190));
+        jPanel1.add(tijerarred1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 90, -1, 190));
 
         Label1.setText("Label1");
-        jPanel1.add(Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, -1, -1));
+        jPanel1.add(Label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, -1, -1));
 
         Label2.setText("Label2");
-        jPanel1.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, -1, -1));
+        jPanel1.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 180, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Gadugi", 2, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("JUGADOR");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 90, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 90, -1));
 
         jLabel2.setFont(new java.awt.Font("Gadugi", 2, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("COMPUTADOR");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 30, 140, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 30, 140, -1));
 
-        puntaje.setText("jLabel3");
-        jPanel1.add(puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, -1, -1));
-
-        jLabel3.setText("jLabel3");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
+        puntaje.setFont(new java.awt.Font("Candara", 2, 24)); // NOI18N
+        puntaje.setForeground(new java.awt.Color(255, 255, 255));
+        puntaje.setText("resultados");
+        jPanel1.add(puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -375,7 +377,6 @@ public class interfazjuego extends javax.swing.JFrame {
     private javax.swing.JLabel Label2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton papelblue;
     private javax.swing.JButton papelblue1;
