@@ -178,6 +178,7 @@ public class interfazjuego extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         puntaje = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -245,15 +246,15 @@ public class interfazjuego extends javax.swing.JFrame {
         });
         jPanel1.add(tijerablue1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
 
-        score.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        score.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         score.setForeground(new java.awt.Color(255, 255, 255));
         score.setText("0");
-        jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 20, 20));
+        jPanel1.add(score, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 50, 30));
 
-        score2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        score2.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         score2.setForeground(new java.awt.Color(255, 255, 255));
         score2.setText("0");
-        jPanel1.add(score2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 30, 20, 20));
+        jPanel1.add(score2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 30, 20, 20));
 
         piedrared1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/piedra red.png"))); // NOI18N
         piedrared1.setContentAreaFilled(false);
@@ -278,20 +279,23 @@ public class interfazjuego extends javax.swing.JFrame {
         Label2.setText("Label2");
         jPanel1.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 180, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Gadugi", 2, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Gadugi", 2, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("JUGADOR");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 90, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 120, -1));
 
-        jLabel2.setFont(new java.awt.Font("Gadugi", 2, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Gadugi", 2, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("COMPUTADOR");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 30, 140, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 30, 190, 20));
 
         puntaje.setFont(new java.awt.Font("Candara", 2, 24)); // NOI18N
         puntaje.setForeground(new java.awt.Color(255, 255, 255));
         puntaje.setText("resultados");
-        jPanel1.add(puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, -1, -1));
+        jPanel1.add(puntaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Acer\\Desktop\\fondo.png")); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -377,6 +381,7 @@ public class interfazjuego extends javax.swing.JFrame {
     private javax.swing.JLabel Label2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton papelblue;
     private javax.swing.JButton papelblue1;
