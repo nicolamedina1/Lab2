@@ -18,7 +18,7 @@ public class Logicamatrices {
     int columnas=0;
 
     
-    public void tamaño(JTable p){
+    public void tamaño(JTable p){ // metodo para el tamaño de la tabla1 y 2
         switch (lista1) {
             case "1":
                 filas=1;
@@ -62,7 +62,7 @@ public class Logicamatrices {
         }
         p.setModel(Modelo1);   
     }
-    public  Double [][] sumamatrices( Double[][] Matriz1, Double [][]Matriz2){
+    public  Double [][] sumamatrices( Double[][] Matriz1, Double [][]Matriz2){// operacion metodo
 
         for(i=0;i< filas ;i++){
             for(j=0;j<columnas;j++){
@@ -71,7 +71,7 @@ public class Logicamatrices {
         }
         return Res ;
     }
-    public Double[][] restarmatrices(Double[][] Matriz1, Double[][] Matriz2) {
+    public Double[][] restarmatrices(Double[][] Matriz1, Double[][] Matriz2) {// operacion metodo
 
         for (i = 0; i < filas; i++) {
             for (j = 0; j < columnas; j++) {

@@ -1,7 +1,7 @@
 
 package lab2;
 
-import javax.swing.JTable;
+
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,7 +16,6 @@ public class matrices extends javax.swing.JFrame {
     
     public matrices() {
         initComponents();
-        JTable tabla1, tabla2, tabla3;
 
     }
 
@@ -318,7 +317,6 @@ public class matrices extends javax.swing.JFrame {
     private void OPCIONES4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OPCIONES4ActionPerformed
        pasa.lista2=(String) OPCIONES4.getSelectedItem();
        pasa.tamaño(tabla2);
-       
     }//GEN-LAST:event_OPCIONES4ActionPerformed
 
     private void OPCIONES3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OPCIONES3ActionPerformed
@@ -328,7 +326,6 @@ public class matrices extends javax.swing.JFrame {
     private void SumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumaActionPerformed
     int n = Integer.parseInt((String)OPCIONES1.getSelectedItem());
     int g = Integer.parseInt((String) OPCION2.getSelectedItem());
-
     if(OPCIONES1.getSelectedItem().equals(OPCIONES3.getSelectedItem()))
     {
         if(OPCION2.getSelectedItem().equals(OPCIONES4.getSelectedItem())){
@@ -460,7 +457,7 @@ public class matrices extends javax.swing.JFrame {
             }
         });
     }
-    public void mostrarmatriz(Double Res[][], int n, int g){
+    public void mostrarmatriz(Double Res[][], int n, int g){// emtodo pasar valores tabla 3
         DefaultTableModel Modelo2 = (DefaultTableModel) tabla3.getModel();
         Modelo2.setRowCount(n);
         Modelo2.setColumnCount(g); 
