@@ -1,10 +1,9 @@
 
 package lab2;
 
-import java.util.Arrays;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 
@@ -17,7 +16,7 @@ public class matrices extends javax.swing.JFrame {
     
     public matrices() {
         initComponents();
-        JTable tabla1,tabla3, tabla2;
+        JTable tabla1, tabla2, tabla3;
 
     }
 
@@ -45,7 +44,7 @@ public class matrices extends javax.swing.JFrame {
         Resta = new javax.swing.JButton();
         Multiplicacion = new javax.swing.JButton();
         INVERSE = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
         tabla3 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -186,8 +185,9 @@ public class matrices extends javax.swing.JFrame {
             }
         });
 
-        jScrollPane2.setBackground(new java.awt.Color(0, 51, 204));
+        jScrollPane4.setBackground(new java.awt.Color(255, 153, 102));
 
+        tabla3.setAutoCreateRowSorter(true);
         tabla3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         tabla3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -199,11 +199,8 @@ public class matrices extends javax.swing.JFrame {
         ));
         tabla3.setToolTipText("");
         tabla3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        tabla3.setGridColor(new java.awt.Color(102, 102, 102));
         tabla3.setRowSelectionAllowed(false);
-        tabla3.setSelectionBackground(new java.awt.Color(153, 153, 153));
-        tabla3.setSelectionForeground(new java.awt.Color(255, 204, 51));
-        jScrollPane2.setViewportView(tabla3);
+        jScrollPane4.setViewportView(tabla3);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -246,7 +243,7 @@ public class matrices extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Suma)
                         .addGap(18, 18, 18)
@@ -290,9 +287,9 @@ public class matrices extends javax.swing.JFrame {
                     .addComponent(Suma)
                     .addComponent(Multiplicacion)
                     .addComponent(INVERSE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -321,6 +318,7 @@ public class matrices extends javax.swing.JFrame {
     private void OPCIONES4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OPCIONES4ActionPerformed
        pasa.lista2=(String) OPCIONES4.getSelectedItem();
        pasa.tamaño(tabla2);
+       
     }//GEN-LAST:event_OPCIONES4ActionPerformed
 
     private void OPCIONES3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OPCIONES3ActionPerformed
@@ -328,7 +326,10 @@ public class matrices extends javax.swing.JFrame {
     }//GEN-LAST:event_OPCIONES3ActionPerformed
 
     private void SumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumaActionPerformed
-   if(OPCIONES1.getSelectedItem().equals(OPCIONES3.getSelectedItem()))
+    int n = Integer.parseInt((String)OPCIONES1.getSelectedItem());
+    int g = Integer.parseInt((String) OPCION2.getSelectedItem());
+
+    if(OPCIONES1.getSelectedItem().equals(OPCIONES3.getSelectedItem()))
     {
         if(OPCION2.getSelectedItem().equals(OPCIONES4.getSelectedItem())){
              String[][] array_tabla1 = new String[tabla1.getRowCount()][tabla1.getColumnCount()];
@@ -343,9 +344,54 @@ public class matrices extends javax.swing.JFrame {
 
                  }
              }
+             String[][] array_tabla2 = new String[tabla2.getRowCount()][tabla2.getColumnCount()];
+             for (int i = 0; i < tabla2.getRowCount(); i++) {
+                 for (int j = 0; j < tabla2.getColumnCount(); j++) {
+                     array_tabla2[i][j] = (String) tabla2.getValueAt(i, j);
+                 }
+             }
+             for (int i = 0; i < tabla2.getRowCount(); i++) {
+                 for (int j = 0; j < tabla2.getColumnCount(); j++) {
+                     pasa.Matriz2[i][j]=Double.parseDouble(array_tabla2[i][j]);
+                 }
+             }
+             for (int i = 0; i < tabla2.getRowCount(); i++) {
+                for (int j = 0; j < tabla2.getColumnCount(); j++) {
+                    pasa.Matriz2[i][j] = Double.parseDouble(array_tabla2[i][j]);
+                }
+            }
+             this.mostrarmatriz(pasa.sumamatrices(pasa.Matriz1,pasa.Matriz2), n,g);    
+        }else{
+            JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
+        }
+    }else{
+        JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
+    }
+   
+
+    }//GEN-LAST:event_SumaActionPerformed
+
+    private void MultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MultiplicacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MultiplicacionActionPerformed
+
+    private void RestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestaActionPerformed
+     int n = Integer.parseInt((String)OPCIONES1.getSelectedItem());
+     int g = Integer.parseInt((String) OPCION2.getSelectedItem());
+
+    if(OPCIONES1.getSelectedItem().equals(OPCIONES3.getSelectedItem()))
+    {
+        if(OPCION2.getSelectedItem().equals(OPCIONES4.getSelectedItem())){
+             String[][] array_tabla1 = new String[tabla1.getRowCount()][tabla1.getColumnCount()];
              for (int i = 0; i < tabla1.getRowCount(); i++) {
                  for (int j = 0; j < tabla1.getColumnCount(); j++) {
-                     System.out.println(pasa.Matriz1[i][j]);
+                     array_tabla1[i][j] = ((String) tabla1.getValueAt(i, j));
+                 }
+             }
+             for (int i = 0; i < tabla1.getRowCount(); i++) {
+                 for (int j = 0; j < tabla1.getColumnCount(); j++) {
+                    pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
+
                  }
              }
              String[][] array_tabla2 = new String[tabla2.getRowCount()][tabla2.getColumnCount()];
@@ -359,49 +405,21 @@ public class matrices extends javax.swing.JFrame {
                      pasa.Matriz2[i][j]=Double.parseDouble(array_tabla2[i][j]);
                  }
              }
-             
              for (int i = 0; i < tabla2.getRowCount(); i++) {
-                 for (int j = 0; j < tabla2.getColumnCount(); j++) {
-                 }
-             }
+                for (int j = 0; j < tabla2.getColumnCount(); j++) {
+                    pasa.Matriz2[i][j] = Double.parseDouble(array_tabla2[i][j]);
+                }
+            }
+            
+             this.mostrarmatriz(pasa.restarmatrices(pasa.Matriz1,pasa.Matriz2), n, g);
+   
                 
-             
         }else{
             JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
         }
     }else{
         JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
-
-
-   }
-   
-    /*DefaultTableModel tablaa = (DefaultTableModel) tabla1.getModel(),
-                      tablab = (DefaultTableModel) tabla3.getModel();
-    if(tabla1.getSelectedRowCount() > 0) {
-     
-     int[] indices = tabla1.getSelectedRows();
-      
-     for(int i : indices) {
-         Object[] fila = new Object[tablaa.getColumnCount()];
-         
-         for(int j = 0; j < fila.length; j++) {
-             fila[j] = tablaa.getValueAt(i, j);
-         }
-         // 3) Agrega la fila al TableModel de la tabla de destino
-         tablab.addRow(fila);
-     }
- }
-    */
-        DefaultTableModel respuesta = (DefaultTableModel) tabla3.getModel();
-
-    }//GEN-LAST:event_SumaActionPerformed
-
-    private void MultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MultiplicacionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MultiplicacionActionPerformed
-
-    private void RestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestaActionPerformed
-        // TODO add your handling code here:
+    }
     }//GEN-LAST:event_RestaActionPerformed
 
     private void INVERSEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_INVERSEActionPerformed
@@ -442,6 +460,17 @@ public class matrices extends javax.swing.JFrame {
             }
         });
     }
+    public void mostrarmatriz(Double Res[][], int n, int g){
+        DefaultTableModel Modelo2 = (DefaultTableModel) tabla3.getModel();
+        Modelo2.setRowCount(n);
+        Modelo2.setColumnCount(g); 
+        for(int i=0;i<n;i++){
+            for(int j=0;j<g;j++){
+                tabla3.setValueAt(Res[i][j], i, j);
+            }
+        }
+    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton INVERSE;
@@ -460,8 +489,8 @@ public class matrices extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable tabla1;
     private javax.swing.JTable tabla2;
     private javax.swing.JTable tabla3;

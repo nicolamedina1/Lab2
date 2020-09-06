@@ -254,7 +254,7 @@ public class interfazjuego extends javax.swing.JFrame {
         score2.setFont(new java.awt.Font("Tahoma", 0, 22)); // NOI18N
         score2.setForeground(new java.awt.Color(255, 255, 255));
         score2.setText("0");
-        jPanel1.add(score2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 30, 20, 20));
+        jPanel1.add(score2, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 30, 30, 20));
 
         piedrared1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/piedra red.png"))); // NOI18N
         piedrared1.setContentAreaFilled(false);
