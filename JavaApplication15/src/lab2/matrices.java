@@ -1,22 +1,14 @@
 
 package lab2;
 
-
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-
-
 public class matrices extends javax.swing.JFrame {
         Logicamatrices pasa = new Logicamatrices();
-        
 
-
-
-    
     public matrices() {
         initComponents();
-
     }
 
     
@@ -333,37 +325,25 @@ public class matrices extends javax.swing.JFrame {
              for (int i = 0; i < tabla1.getRowCount(); i++) {
                  for (int j = 0; j < tabla1.getColumnCount(); j++) {
                      array_tabla1[i][j] = ((String) tabla1.getValueAt(i, j));
-                 }
-             }
-             for (int i = 0; i < tabla1.getRowCount(); i++) {
-                 for (int j = 0; j < tabla1.getColumnCount(); j++) {
-                    pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
-
+                     pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
                  }
              }
              String[][] array_tabla2 = new String[tabla2.getRowCount()][tabla2.getColumnCount()];
              for (int i = 0; i < tabla2.getRowCount(); i++) {
                  for (int j = 0; j < tabla2.getColumnCount(); j++) {
                      array_tabla2[i][j] = (String) tabla2.getValueAt(i, j);
-                 }
-             }
-             for (int i = 0; i < tabla2.getRowCount(); i++) {
-                 for (int j = 0; j < tabla2.getColumnCount(); j++) {
                      pasa.Matriz2[i][j]=Double.parseDouble(array_tabla2[i][j]);
                  }
              }
-             for (int i = 0; i < tabla2.getRowCount(); i++) {
-                for (int j = 0; j < tabla2.getColumnCount(); j++) {
-                    pasa.Matriz2[i][j] = Double.parseDouble(array_tabla2[i][j]);
-                }
-            }
-             this.mostrarmatriz(pasa.sumamatrices(pasa.Matriz1,pasa.Matriz2), n,g);    
+             this.mostrarmatriz(pasa.sumamatrices(pasa.Matriz1,pasa.Matriz2), n,g);  
+             
         }else{
             JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
         }
     }else{
         JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
     }
+        
    
 
     }//GEN-LAST:event_SumaActionPerformed
@@ -383,34 +363,18 @@ public class matrices extends javax.swing.JFrame {
              for (int i = 0; i < tabla1.getRowCount(); i++) {
                  for (int j = 0; j < tabla1.getColumnCount(); j++) {
                      array_tabla1[i][j] = ((String) tabla1.getValueAt(i, j));
+                     pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
                  }
              }
-             for (int i = 0; i < tabla1.getRowCount(); i++) {
-                 for (int j = 0; j < tabla1.getColumnCount(); j++) {
-                    pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
-
-                 }
-             }
+          
              String[][] array_tabla2 = new String[tabla2.getRowCount()][tabla2.getColumnCount()];
              for (int i = 0; i < tabla2.getRowCount(); i++) {
                  for (int j = 0; j < tabla2.getColumnCount(); j++) {
                      array_tabla2[i][j] = (String) tabla2.getValueAt(i, j);
-                 }
-             }
-             for (int i = 0; i < tabla2.getRowCount(); i++) {
-                 for (int j = 0; j < tabla2.getColumnCount(); j++) {
                      pasa.Matriz2[i][j]=Double.parseDouble(array_tabla2[i][j]);
                  }
              }
-             for (int i = 0; i < tabla2.getRowCount(); i++) {
-                for (int j = 0; j < tabla2.getColumnCount(); j++) {
-                    pasa.Matriz2[i][j] = Double.parseDouble(array_tabla2[i][j]);
-                }
-            }
-            
-             this.mostrarmatriz(pasa.restarmatrices(pasa.Matriz1,pasa.Matriz2), n, g);
-   
-                
+             this.mostrarmatriz(pasa.restarmatrices(pasa.Matriz1,pasa.Matriz2), n, g);     
         }else{
             JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
         }
