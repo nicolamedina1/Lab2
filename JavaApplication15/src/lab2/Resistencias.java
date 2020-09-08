@@ -864,7 +864,18 @@ public class Resistencias extends javax.swing.JFrame {
             contenido = Double.parseDouble(banda2.getText())/10;
         }
         calculo = contenido * multiplicador;
-        resultado.setText( calculo + " ± " + tolerancia.getText());
+        if (calculo >= 1000000)
+        {
+            resultado.setText( calculo/1000000 + "MΩ" + " ± " + tolerancia.getText());
+        }
+        else if (calculo >= 1000)
+        {
+            resultado.setText( calculo/1000 + "KΩ" + " ± " + tolerancia.getText());
+        }
+        else
+        {
+        resultado.setText( calculo + "Ω" + " ± " + tolerancia.getText());
+        }
     }//GEN-LAST:event_calcularActionPerformed
 
     private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
