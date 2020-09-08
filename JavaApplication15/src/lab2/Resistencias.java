@@ -123,6 +123,7 @@ public class Resistencias extends javax.swing.JFrame {
         colorbanda3 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         calcular = new javax.swing.JButton();
+        Volver = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -611,6 +612,14 @@ public class Resistencias extends javax.swing.JFrame {
         });
         getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 535, 89, 90));
 
+        Volver.setText("Volver");
+        Volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VolverActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 40));
+
         jLabel6.setIcon(new javax.swing.ImageIcon("/Users/nicolasmedina/Downloads/54974hd.jpg")); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 680));
 
@@ -858,6 +867,13 @@ public class Resistencias extends javax.swing.JFrame {
         resultado.setText( calculo + " ± " + tolerancia.getText());
     }//GEN-LAST:event_calcularActionPerformed
 
+    private void VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VolverActionPerformed
+        // TODO add your handling code here:
+        Maininterfaz abrir = new Maininterfaz();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_VolverActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -894,6 +910,7 @@ public class Resistencias extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Volver;
     private javax.swing.JButton amarillo1;
     private javax.swing.JButton amarillo2;
     private javax.swing.JButton amarillo3;
