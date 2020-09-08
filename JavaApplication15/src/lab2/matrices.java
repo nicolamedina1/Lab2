@@ -343,8 +343,6 @@ public class matrices extends javax.swing.JFrame {
     }else{
         JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
     }
-        
-   
 
     }//GEN-LAST:event_SumaActionPerformed
 
