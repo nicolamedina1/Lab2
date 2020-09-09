@@ -853,12 +853,21 @@ public class Resistencias extends javax.swing.JFrame {
         banda3.setText("");
         tolerancia.setText("");
         resultado.setText("");
+        colorbanda1.setBackground(new java.awt.Color(255,255,255));
+        colorbanda2.setBackground(new java.awt.Color(255,255,255));
+        colorbanda3.setBackground(new java.awt.Color(255,255,255));
+        colorbanda4.setBackground(new java.awt.Color(255,255,255));
     }//GEN-LAST:event_reiniciarActionPerformed
 
     private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
         // TODO add your handling code here:
         contenido = Double.parseDouble(banda1.getText() + banda2.getText());
         multiplicador = Double.parseDouble(multiplicadora);
+        if (banda1.getText().equals("")||banda2.getText().equals("")||banda3.getText().equals("")||tolerancia.getText().equals(""))
+        {
+            resultado.setText("ERROR, LLENE TODOS LOS DATOS PARA CALCULAR EL VALOR DE SU RESISTENCIA");
+        }
+        else{
         if (banda1.getText().equals("0"))
         {
             contenido = Double.parseDouble(banda2.getText())/10;
@@ -875,6 +884,7 @@ public class Resistencias extends javax.swing.JFrame {
         else
         {
         resultado.setText( calculo + "Ω" + " ± " + tolerancia.getText());
+        }
         }
     }//GEN-LAST:event_calcularActionPerformed
 
