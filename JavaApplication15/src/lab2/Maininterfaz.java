@@ -42,7 +42,7 @@ public class Maininterfaz extends javax.swing.JFrame {
                 juegoActionPerformed(evt);
             }
         });
-        getContentPane().add(juego, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 216, 49));
+        getContentPane().add(juego, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 216, 49));
 
         resistencias.setBackground(new java.awt.Color(102, 102, 102));
         resistencias.setText("Calculadora de resistencias");
@@ -51,7 +51,7 @@ public class Maininterfaz extends javax.swing.JFrame {
                 resistenciasActionPerformed(evt);
             }
         });
-        getContentPane().add(resistencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 208, 220, 49));
+        getContentPane().add(resistencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 220, 49));
 
         matrices.setBackground(new java.awt.Color(102, 102, 102));
         matrices.setText("Calculadora de matrices");
@@ -60,10 +60,10 @@ public class Maininterfaz extends javax.swing.JFrame {
                 matricesActionPerformed(evt);
             }
         });
-        getContentPane().add(matrices, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 129, 216, 49));
+        getContentPane().add(matrices, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 216, 49));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/nicolasmedina/Downloads/68096662-textura-de-madera-negra-de-fondo-en-blanco-para-el-diseño.jpg")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 396, 310));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/54974hd.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 620, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

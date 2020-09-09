@@ -599,7 +599,7 @@ public class Resistencias extends javax.swing.JFrame {
         getContentPane().add(colorbanda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, 30, 70));
         getContentPane().add(colorbanda3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, 30, 70));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("/Users/nicolasmedina/Downloads/electric-resistencia-02.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/electric-resistencia-02.png"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 450, 120));
 
         calcular.setBackground(new java.awt.Color(102, 102, 102));
@@ -620,7 +620,7 @@ public class Resistencias extends javax.swing.JFrame {
         });
         getContentPane().add(Volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 40));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon("/Users/nicolasmedina/Downloads/54974hd.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/54974hd.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1160, 680));
 
         pack();
