@@ -194,7 +194,7 @@ public class matrices extends javax.swing.JFrame {
 
         INVERSE.setBackground(new java.awt.Color(255, 204, 204));
         INVERSE.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        INVERSE.setText("A * B^-1");
+        INVERSE.setText("A ^-1");
         INVERSE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 INVERSEActionPerformed(evt);
@@ -240,24 +240,29 @@ public class matrices extends javax.swing.JFrame {
 
     private void OPCIONES1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OPCIONES1ActionPerformed
         pasa.lista1=(String) OPCIONES1.getSelectedItem(); 
+        pasa.lista3=(String) OPCIONES1.getSelectedItem();
+
     }//GEN-LAST:event_OPCIONES1ActionPerformed
 
     private void OPCION2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OPCION2ActionPerformed
        pasa.lista2=(String) OPCION2.getSelectedItem();
        pasa.tamaño(tabla1);
+
     }//GEN-LAST:event_OPCION2ActionPerformed
 
     private void OPCIONES4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OPCIONES4ActionPerformed
        pasa.lista2=(String) OPCIONES4.getSelectedItem();
        pasa.tamaño(tabla2);
+
     }//GEN-LAST:event_OPCIONES4ActionPerformed
 
     private void OPCIONES3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OPCIONES3ActionPerformed
         pasa.lista1=(String) OPCIONES3.getSelectedItem(); 
+        pasa.lista4=(String) OPCIONES3.getSelectedItem();
     }//GEN-LAST:event_OPCIONES3ActionPerformed
 
     private void SumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SumaActionPerformed
-    int n = Integer.parseInt((String)OPCIONES1.getSelectedItem());
+        int n = Integer.parseInt((String)OPCIONES1.getSelectedItem());
     int g = Integer.parseInt((String) OPCION2.getSelectedItem());
     if(OPCIONES1.getSelectedItem().equals(OPCIONES3.getSelectedItem()))
     {
@@ -283,12 +288,40 @@ public class matrices extends javax.swing.JFrame {
         }
     }else{
         JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
-    }
+    }     
+
 
     }//GEN-LAST:event_SumaActionPerformed
 
     private void MultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MultiplicacionActionPerformed
         // TODO add your handling code here:
+        int n = Integer.parseInt((String)OPCIONES1.getSelectedItem());
+     int g = Integer.parseInt((String) OPCIONES4.getSelectedItem());
+
+    if(OPCION2.getSelectedItem().equals(OPCIONES3.getSelectedItem()))
+    {
+        
+             String[][] array_tabla1 = new String[tabla1.getRowCount()][tabla1.getColumnCount()];
+             for (int i = 0; i < tabla1.getRowCount(); i++) {
+                 for (int j = 0; j < tabla1.getColumnCount(); j++) {
+                     array_tabla1[i][j] = ((String) tabla1.getValueAt(i, j));
+                     pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
+                 }
+             }
+          
+             String[][] array_tabla2 = new String[tabla2.getRowCount()][tabla2.getColumnCount()];
+             for (int i = 0; i < tabla2.getRowCount(); i++) {
+                 for (int j = 0; j < tabla2.getColumnCount(); j++) {
+                     array_tabla2[i][j] = (String) tabla2.getValueAt(i, j);
+                     pasa.Matriz2[i][j]=Double.parseDouble(array_tabla2[i][j]);
+                 }
+             }
+             this.mostrarmatriz(pasa.multiplicarmatrices(pasa.Matriz1,pasa.Matriz2), n, g);     
+        
+    }else{
+        JOptionPane.showMessageDialog(null, "error las columnas de la matriz 1 no son iguales a las filas de la matriz 2");
+    }
+
     }//GEN-LAST:event_MultiplicacionActionPerformed
 
     private void RestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RestaActionPerformed
@@ -324,6 +357,23 @@ public class matrices extends javax.swing.JFrame {
 
     private void INVERSEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_INVERSEActionPerformed
         // TODO add your handling code here:
+        int n = Integer.parseInt((String)OPCIONES1.getSelectedItem());
+    int g = Integer.parseInt((String) OPCION2.getSelectedItem());
+    if(OPCIONES1.getSelectedItem().equals(OPCION2.getSelectedItem()))
+    {
+        
+             String[][] array_tabla1 = new String[tabla1.getRowCount()][tabla1.getColumnCount()];
+             for (int i = 0; i < tabla1.getRowCount(); i++) {
+                 for (int j = 0; j < tabla1.getColumnCount(); j++) {
+                     array_tabla1[i][j] = ((String) tabla1.getValueAt(i, j));
+                     pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
+                 }
+             }
+             this.mostrarmatriz(pasa.inversamatrices(pasa.Matriz1), n,g);  
+             
+        }else{
+            JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
+    }
     }//GEN-LAST:event_INVERSEActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -407,3 +457,4 @@ public class matrices extends javax.swing.JFrame {
 
    
 }
+
