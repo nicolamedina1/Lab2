@@ -361,18 +361,21 @@ public class matrices extends javax.swing.JFrame {
     int g = Integer.parseInt((String) OPCION2.getSelectedItem());
     if(OPCIONES1.getSelectedItem().equals(OPCION2.getSelectedItem()))
     {
-        
-             String[][] array_tabla1 = new String[tabla1.getRowCount()][tabla1.getColumnCount()];
-             for (int i = 0; i < tabla1.getRowCount(); i++) {
-                 for (int j = 0; j < tabla1.getColumnCount(); j++) {
-                     array_tabla1[i][j] = ((String) tabla1.getValueAt(i, j));
-                     pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
-                 }
-             }
-             this.mostrarmatriz(pasa.inversamatrices(pasa.Matriz1), n,g);  
-             
+        String[][] array_tabla1 = new String[tabla1.getRowCount()][tabla1.getColumnCount()];
+        for (int i = 0; i < tabla1.getRowCount(); i++) {
+        for (int j = 0; j < tabla1.getColumnCount(); j++) {
+        array_tabla1[i][j] = ((String) tabla1.getValueAt(i, j));
+        pasa.Matriz1[i][j]=Double.parseDouble(array_tabla1[i][j]);
+        }
+        }
+        if(pasa.determinante(pasa.Matriz1)!=0){
+           this.mostrarmatriz(pasa.inversamatrices(pasa.Matriz1), n,g);  
         }else{
-            JOptionPane.showMessageDialog(null, "error las matrices no tienen el mismo tamaño");
+            JOptionPane.showMessageDialog(null, "la matriz a no tiene inversa");
+   
+        }     
+        }else{
+            JOptionPane.showMessageDialog(null, "error las matrices no es cuadrada");
     }
     }//GEN-LAST:event_INVERSEActionPerformed
 

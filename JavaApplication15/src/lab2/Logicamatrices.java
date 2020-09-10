@@ -226,6 +226,40 @@ public class Logicamatrices {
         }
         return Inv;
     }
+     public Double determinante(Double[][]matriz1){
+        switch (lista3) {
+            case "1":
+                filasm1=1;
+                break;
+            case "2":
+                 filasm1=2;
+                  break;
+            case "3":
+                 filasm1=3;
+                 break;
+            case "4":
+                 filasm1=4;
+               break;
+            default:
+                break;
+        }
+        if(filasm1 == 2){
+            for (i = 0; i < 2; i++){
+            for (j = 0; j < 2; j++){
+            det = ((Matriz1[0][0]*Matriz1[1][1])-(Matriz1[1][0]*Matriz1[0][1]));
+            }
+            }
+        }else if(filasm1 == 3){
+            for (i = 0; i < 3; i++){
+            for (j = 0; j < 3; j++){
+            det = ((Matriz1[0][0] * Matriz1[1][1] * Matriz1[2][2])+(Matriz1[0][1] * Matriz1[1][2] * Matriz1[2][0])+(Matriz1[0][2] * Matriz1[1][0] * Matriz1[2][1])
+                    -((Matriz1[2][0] * Matriz1[1][1] * Matriz1[0][2])+(Matriz1[2][1] * Matriz1[1][2] * Matriz1[0][0])+(Matriz1[2][2] * Matriz1[1][0] * Matriz1[0][1])));
+            }
+        }
+        }
+        return det;
+        
+     }
 }
 
     
